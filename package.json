@@ -1,0 +1,36 @@
+{
+  "name": "node-red-twitter-stream-location",
+  "version": "1.0.0",
+  "description": "Node-red node for querying the Twitter streaming API by location",
+    "node-red": {
+    "nodes": {
+      "twitter-stream-location": "twitterStreamLocation/twitter-stream-location.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/virtualarchitectures/node-red-contrib-twitter-stream-location.git"
+  },
+  "keywords": [
+  	"node-red",
+  	"twitter",
+  	"stream",
+  	"tweet",
+  	"geo",
+  	"location"
+  ],
+  "dependencies": {
+    "twit": "*",
+    "https-proxy-agent": "*"
+  },
+  "author": {
+    "name": "Oliver Dawkins",
+    "email": "virtualarchitectures@gmail.com",
+    "url": "https://github.com/virtualarchitectures"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/virtualarchitectures/node-red-contrib-twitter-stream-location/issues"
+  },
+  "homepage": "https://github.com/virtualarchitectures/node-red-contrib-twitter-stream-location#readme"
+}
