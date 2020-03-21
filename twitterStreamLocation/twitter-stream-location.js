@@ -45,7 +45,7 @@ module.exports = function(RED) {
         node.follow = n.follow || "";
         node.topics = n.topics || "";
         node.xmin = n.xmin || "";
-        node.max = n.xmax || "";
+        node.xmax = n.xmax || "";
         node.ymin = n.ymin || "";
         node.ymax = n.ymax || "";
         node.tweetLimit = parseInt(n.tweetLimit) || 0;
@@ -91,8 +91,8 @@ module.exports = function(RED) {
             });
         }
 
-        if (node.xmin !== "" && node.xmax !== "" && node.ymin !== "" && node.ymax !== "") {
-        	node.locations = [node.ymin, node.xmin, node.ymax, node.xmax];
+        if (node.xmin !== "" && node.ymin !== "" && node.xmax !== "" && node.ymax !== "") {
+        	node.locations = [node.xmin, node.ymin, node.xmax, node.ymax];
         	node.streamOptions.locations = node.locations;
         }
         
