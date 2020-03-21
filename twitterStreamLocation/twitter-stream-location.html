@@ -58,20 +58,20 @@
     </div>
 
     <div class="form-row">
-        <label for="ymax" style="width:25%">Y Max</label>
-        <input type="text" id="ymax">
+        <label for="node-input-ymax" style="width:25%">Y Max</label>
+        <input type="text" id="node-input-ymax">
     </div>
     <div class="form-row">
-        <label for="xmin" style="width:25%">X Min</label>
-        <input type="text" id="xmin">
+        <label for="node-input-xmin" style="width:25%">X Min</label>
+        <input type="text" id="node-input-xmin">
     </div>
     <div class="form-row">
-        <label for="xmax" style="width:25%">X Max</label>
-        <input type="text" id="xmax">
+        <label for="node-input-xmax" style="width:25%">X Max</label>
+        <input type="text" id="node-input-xmax">
     </div>
     <div class="form-row">
-        <label for="ymin" style="width:25%">Y Min</label>
-        <input type="text" id="ymin">
+        <label for="node-input-ymin" style="width:25%">Y Min</label>
+        <input type="text" id="node-input-ymin">
     </div>
 
     <div class="form-row">
@@ -133,6 +133,10 @@
             connection: {value:"",type:"twitter-api-connection"},
             follow: {value:"",required:false},
             topics: {value:"",required:false},
+            xmin: {value:"",required:false},
+            xmax: {value:"",required:false},
+            ymin: {value:"",required:false},
+            ymax: {value:"",required:false},
             tweetLimit: {value:"0"},
             onlyVerified: {value:false},
             topicRetweets: {value:false},

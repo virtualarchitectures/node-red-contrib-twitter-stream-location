@@ -44,6 +44,10 @@ module.exports = function(RED) {
         var node = this;
         node.follow = n.follow || "";
         node.topics = n.topics || "";
+        node.xmin = n.xmin || "";
+        node.max = n.xmax || "";
+        node.ymin = n.ymin || "";
+        node.ymax = n.ymax || "";
         node.tweetLimit = parseInt(n.tweetLimit) || 0;
         node.onlyVerified = n.onlyVerified || false;
         node.topicRetweets = n.topicRetweets || false;
@@ -53,6 +57,7 @@ module.exports = function(RED) {
         node.waitForUserLookup = false;
         node.userNames = [];
         node.userIDs = [];
+        node.locations = [];
         node.streamOptions = {};
         node.tweetCount = 0;
         node.connection = RED.nodes.getNode(n.connection);
@@ -85,10 +90,15 @@ module.exports = function(RED) {
                 node.waitForUserLookup = false;
             });
         }
+
+        if (node.xmin !== "" && node.xmax !== "" && node.ymin !== "" && node.ymax !== "") {
+        	node.locations = [node.ymin, node.xmin, node.ymax, node.xmax];
+        	node.streamOptions.locations = node.locations;
+        }
         
         var startInterval = setInterval(() => {
             if (node.waitForUserLookup === false) {
-                if (node.streamOptions.follow || node.streamOptions.track) {
+                if (node.streamOptions.follow || node.streamOptions.track || node.streamOptions.locations) {
                     node.stream = node.connection.client.stream('statuses/filter', node.streamOptions);
                     node.stream.on('connect', function (request) {
                         node.log('streaming API connecting');
