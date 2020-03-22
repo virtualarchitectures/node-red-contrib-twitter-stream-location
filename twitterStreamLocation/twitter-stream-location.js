@@ -48,6 +48,8 @@ module.exports = function(RED) {
         node.xmax = n.xmax || "";
         node.ymin = n.ymin || "";
         node.ymax = n.ymax || "";
+        node.onlyPoints = n.onlyPoints || false;
+        node.onlyBounded = n.onlyBounded || false;
         node.tweetLimit = parseInt(n.tweetLimit) || 0;
         node.onlyVerified = n.onlyVerified || false;
         node.topicRetweets = n.topicRetweets || false;
@@ -133,6 +135,24 @@ module.exports = function(RED) {
                         // if non requested language, drop tweet
                         if (node.topicLanguage.indexOf(tweet.lang) < 0) {
                             node.log('skip: language https://twitter.com/statuses/' + tweet.id_str);
+                            return;
+                        }
+
+                        // if no point coordinate, drop tweet
+                        if (node.locations !== null && node.onlyPoints === true && tweet.geo === null) {
+                            node.log('skip: no coordinate https://twitter.com/statuses/' + tweet.id_str);
+                            return;
+                        }
+
+                        // if coordinate falls outside boundary, frop tweet (lat, lon)
+                        if (node.locations !== null && node.onlyBounded === true && 
+                        	(
+                        		(tweet.geo.coordinates[0] < node.ymin || tweet.geo.coordinates[0] > node.ymax) ||
+                        		(tweet.geo.coordinates[1] < node.xmin || tweet.geo.coordinates[1] > node.xmax)
+                        		)
+                        	)
+                        {
+                        	node.log('skip: outside boundary https://twitter.com/statuses/' + tweet.id_str);
                             return;
                         }
                         

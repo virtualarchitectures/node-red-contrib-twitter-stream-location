@@ -76,6 +76,22 @@
         <label for="node-input-ymin" style="width:25%"> South</label>
         <input type="text" id="node-input-ymin">
     </div>
+    <div class="form-row">
+    <td width="100px"><i class="fa fa-filter"></i> Spatial Filters<td>
+    </div>
+        <div class="form-row">
+        <label style="width:25%">Only points?</label>
+        <input type="checkbox" id="node-input-onlyPoints" style="width:auto; vertical-align:top;">
+        <label for="node-input-onlyPoints" style="width:auto;"> Only tweets with exact coordinates</label>
+    </div>
+    <div class="form-row">
+        <label style="width:25%">Only bounded?</label>
+        <input type="checkbox" id="node-input-onlyBounded" style="width:auto; vertical-align:top;">
+        <label for="node-input-onlyBounded" style="width:auto;"> Only tweets within bounding box</label>
+    </div>
+        <div class="form-row form-tips">
+        <span>Results can include Tweets with “Point” coordinates or with a Twitter "Place": <a href="https://developer.twitter.com/en/docs/tutorials/filtering-tweets-by-location" target="_blank">https://developer.twitter.com/en/docs/tutorials/filtering-tweets-by-location</a></span>
+    </div>
 
     <div class="form-row">
     <td width="100px"><i class="fa fa-filter"></i> Streaming API Response Filters<td>
@@ -143,6 +159,8 @@
             xmax: {value:"",required:false},
             ymin: {value:"",required:false},
             ymax: {value:"",required:false},
+            onlyPoints: {value:false},
+            onlyBounded: {value:false},
             tweetLimit: {value:"0"},
             onlyVerified: {value:false},
             topicRetweets: {value:false},
