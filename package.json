@@ -24,10 +24,13 @@
     "https-proxy-agent": "*"
   },
   "author": {
-    "name": "Oliver Dawkins",
-    "email": "virtualarchitectures@gmail.com",
-    "url": "https://github.com/virtualarchitectures"
+    "name": "Sven",
+    "email": "mailsvb@gmail.com",
+    "url": "https://github.com/mailsvb"
   },
+  "contributors": [
+    {"name":"Oliver Dawkins","url":"https://github.com/virtualarchitectures"}
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/virtualarchitectures/node-red-contrib-twitter-stream-location/issues"
