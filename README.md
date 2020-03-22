@@ -17,7 +17,7 @@ Connect to the Twitter streaming API and...
 - Get a Twitter dev account from https://dev.twitter.com
 - Create a Twitter App on https://apps.twitter.com
 - Choose Twitter users / hashtags or random search strings
-- Alternatively provide a pair of longitude and latitude coordinate pairs describing the southwest and northeast corners of a geographic bounding box. These will be entered as North, West, East and South.
+- Alternatively provide latitude and longitude coordinates describing the North, West, East and South extents of a geographic bounding box.
 
 ![Node-Red Twitter Stream Location](images/node-red-contrib-twitter-stream-location.PNG)
 
