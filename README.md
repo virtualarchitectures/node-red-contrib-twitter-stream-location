@@ -8,7 +8,7 @@ Further information on the locations parameter for filtering real-time tweets ca
 ## Features
 - connect to the Twitter streaming API and get tweets of specific users (follow)
 - connect to the Twitter streaming API and get tweets of specific topics (track)
-- connect to the Twitter streaming API and get tweets for a geographic regions based on a bounding box (locations)
+- connect to the Twitter streaming API and get tweets for a geographic region described by a bounding box (locations)
  
 ## Configuration
 - Get a Twitter dev account from https://dev.twitter.com
