@@ -6,9 +6,10 @@ Further information on the locations parameter for filtering real-time tweets ca
 - [Filtering Tweets by location](https://developer.twitter.com/en/docs/tutorials/filtering-tweets-by-location)
 
 ## Features
-- connect to the Twitter streaming API and get tweets of specific users (follow)
-- connect to the Twitter streaming API and get tweets of specific topics (track)
-- connect to the Twitter streaming API and get tweets for a region described by a geographic bounding box (locations)
+Connect to the Twitter streaming API and...
+- Get tweets of specific users (follow)
+- Get tweets of specific topics (track)
+- Get tweets for a specific region described by a geographic bounding box (locations)
  
 ## Configuration
 - Get a Twitter dev account from https://dev.twitter.com
