@@ -5,6 +5,8 @@ Further information on the `locations` parameter for filtering real-time tweets 
 - [Standard streaming API request parameters](https://developer.twitter.com/en/docs/tweets/filter-realtime/guides/basic-stream-parameters)
 - [Filtering Tweets by location](https://developer.twitter.com/en/docs/tutorials/filtering-tweets-by-location)
 
+Be aware of Twitters [Geo Guidelines](https://developer.twitter.com/en/developer-terms/geo-guidelines) for developers.
+
 ## Features
 Connect to the Twitter streaming API and...
 - Get tweets of specific users (follow)
