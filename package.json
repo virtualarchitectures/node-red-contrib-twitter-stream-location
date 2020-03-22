@@ -1,6 +1,6 @@
 {
   "name": "node-red-twitter-stream-location",
-  "version": "1.0.0",
+  "version": "1.5.0",
   "description": "Node-red node for querying the Twitter streaming API by location",
     "node-red": {
     "nodes": {
